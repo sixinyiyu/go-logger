@@ -1,4 +1,4 @@
-package logger
+package log
 
 import (
 	"go.uber.org/zap"
@@ -81,55 +81,55 @@ func NewLogger(logFile string, logLevel string) *Logger{
 	logger := zap.New(core, zap.AddCaller(), zap.Development())
 	sugar := logger.Sugar()
 
-	log := &Logger{sugar}
-	log.sugar.Infof("init Logger success logger file path %s ", logFile)
-	return log
+	_log := &Logger{sugar}
+	_log.sugar.Infof("init Logger success logger file path %s ", logFile)
+	return _log
 }
 
-func (log *Logger)Debug(args ...interface{}) {
-	log.sugar.Debug(args)
+func (_log *Logger)Debug(args ...interface{}) {
+	_log.sugar.Debug(args)
 }
 
-func (log *Logger)Info(args ...interface{}) {
-	log.sugar.Info(args)
+func (_log *Logger)Info(args ...interface{}) {
+	_log.sugar.Info(args)
 }
 
-func (log *Logger)Warn(args ...interface{}) {
-	log.sugar.Warn(args)
+func (_log *Logger)Warn(args ...interface{}) {
+	_log.sugar.Warn(args)
 }
 
-func (log *Logger)Error(args ...interface{}) {
-	log.sugar.Error(args)
+func (_log *Logger)Error(args ...interface{}) {
+	_log.sugar.Error(args)
 }
 
-func (log *Logger)Panic(args ...interface{}) {
-	log.sugar.Panic(args)
+func (_log *Logger)Panic(args ...interface{}) {
+	_log.sugar.Panic(args)
 }
 
-func (log *Logger)Fatal(args ...interface{}) {
-	log.sugar.Fatal(args)
+func (_log *Logger)Fatal(args ...interface{}) {
+	_log.sugar.Fatal(args)
 }
 
-func (log *Logger)Debugf(template string, args ...interface{}) {
-	log.sugar.Debugf(template, args)
+func (_log *Logger)Debugf(template string, args ...interface{}) {
+	_log.sugar.Debugf(template, args)
 }
 
-func (log *Logger)Infof(template string, args ...interface{}) {
-	log.sugar.Infof(template, args)
+func (_log *Logger)Infof(template string, args ...interface{}) {
+	_log.sugar.Infof(template, args)
 }
 
-func (log *Logger)Warnf(template string, args ...interface{}) {
-	log.sugar.Warnf(template, args)
+func (_log *Logger)Warnf(template string, args ...interface{}) {
+	_log.sugar.Warnf(template, args)
 }
 
-func (log *Logger)Errorf(template string, args ...interface{}) {
-	log.sugar.Error(template, args)
+func (_log *Logger)Errorf(template string, args ...interface{}) {
+	_log.sugar.Error(template, args)
 }
 
-func (log *Logger)Panicf(template string, args ...interface{}) {
-	log.sugar.Panicf(template, args)
+func (_log *Logger)Panicf(template string, args ...interface{}) {
+	_log.sugar.Panicf(template, args)
 }
 
-func (log *Logger)Fatalf(template string, args ...interface{}) {
-	log.sugar.Fatalf(template, args)
+func (_log *Logger)Fatalf(template string, args ...interface{}) {
+	_log.sugar.Fatalf(template, args)
 }

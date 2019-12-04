@@ -8,7 +8,7 @@ go 1.13
 ### 使用
 
 ```go
-logger := NewLogger("./log/biz.out", "debug")
+logger := log.NewLogger("./log/biz.out", "debug")
 
 logger.Info(" Hello World Logger !")
 ```
