@@ -1,4 +1,4 @@
-module go-logger
+module github.com/sixinyiyu/go-logger
 
 go 1.13
 
